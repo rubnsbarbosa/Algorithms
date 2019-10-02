@@ -5,7 +5,7 @@ We use the term search to indicate the item for which we are searching. We assum
 
 ### Linear Search  
 
-The simplest search algorithm is linear search algorithm (also known as sequential search). In linear search, we look at each item in the list in turn, quitting once we find an item that matches the search term.  
+The simplest search algorithm is linear search algorithm (also known as sequential search). In linear search, we look at each item in the list in turn, quitting once we find an item that matches the search term. As the name suggests, the complexity of linear search is linear.  
 
 Analysis:  
 
