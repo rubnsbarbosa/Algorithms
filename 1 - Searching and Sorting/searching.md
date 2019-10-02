@@ -9,11 +9,11 @@ The simplest search algorithm is linear search algorithm (also known as sequenti
 
 Analysis:  
 
-• Best case: The best case occurs when the search term is in the first slot in the array, we immediately find the element. The number of comparisons in this case is 1 or **O(1)**.  
+* Best case: The best case occurs when the search term is in the first slot in the array, we immediately find the element. The number of comparisons in this case is 1 or **O(1)**.  
 
-• Worst case: The worst case occurs when the search term is in the last slot in the array, or is not in the array. The number of comparisons in this case is equal to the size of the array. If our array has N items, then it takes N comparisons in the worst case or **O(n)**.  
+* Worst case: The worst case occurs when the search term is in the last slot in the array, or is not in the array. The number of comparisons in this case is equal to the size of the array. If our array has N items, then it takes N comparisons in the worst case or **O(n)**.  
 
-• Average case: On average, the search term will be somewhere in the middle of the array. The number of comparisons in this case is approximately N/2 ∈ **O(n)**.  
+* Average case: On average, the search term will be somewhere in the middle of the array. The number of comparisons in this case is approximately N/2 ∈ **O(n)**.  
 
 In both the worst case and the average case, the number of comparisons is proportional to the number of items in the array, N. Thus, we say in these two cases that the number of comparisons is order N, or O(N) for short. For the best case, we say the number of comparisons is order 1, or O(1) for short.
 
@@ -27,9 +27,9 @@ If it’s higher, we eliminate the lower half of the list and repeat our search 
 
 Analysis:  
 
-• Best case: The best case for binary search still occurs when we find the search term on the first try. In this case, the search term would be in the middle of the list. As with linear search, the best case for binary search is **O(1)**, since it takes exactly one comparison to find the search term in the list.  
+* Best case: The best case for binary search still occurs when we find the search term on the first try. In this case, the search term would be in the middle of the list. As with linear search, the best case for binary search is **O(1)**, since it takes exactly one comparison to find the search term in the list.  
 
-• Worst case: The worst case for binary search occurs when the search term is not in the list, or when the search term is one item away from the middle of the list, or when the search term is the first or last item in the list. How many comparisons does the worst case take? To determine this, let’s look at a few examples.  
+* Worst case: The worst case for binary search occurs when the search term is not in the list, or when the search term is one item away from the middle of the list, or when the search term is the first or last item in the list. How many comparisons does the worst case take? To determine this, let’s look at a few examples.  
 
 Suppose we have a list of four integers: {1, 4, 5, 6}. We want to find 2 in the list. According to the algorithm, we start at the second item in the list, which is 4. Our search term, 2, is less than 4, so we throw out the last three items in the list and concentrate our search on the first item on the list, 1. We compare 2 to 1, and find that 2 is greater than 1. At this point, there are no more items left to search, so we determine that 2 is not in the list. It took two comparisons to determine that 2 is not in the list.
 
@@ -38,6 +38,6 @@ the list. It took three comparisons to find the search term.
 
 If we look at a list that has 16 items, or 32 items, we find that in the worst case it takes 4 and 5 comparisons, respectively, to either find the search term or determine that the search term is not in the list. In all of these examples, the number of comparisons is log2 N. This is much less than the number of comparisons required in the worst case for linear search! In general, the worst case for binary search is order **log N**, or **O(log N)**.
 
-• Average case: The average case occurs when the search term is anywhere else in the list. The number of comparisons is roughly the same as for the worst case, so it also is **O(log N)**.
+* Average case: The average case occurs when the search term is anywhere else in the list. The number of comparisons is roughly the same as for the worst case, so it also is **O(log N)**.
 
 In general, anytime an algorithm involves dividing a list in half, the number of operations is **O(log N)**.

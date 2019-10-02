@@ -16,20 +16,20 @@ def show_array(array):
         print('Index: {} - Value: {}'.format(i, array[i]))
 
 def binary_search(array, key_element):
-    left_index = 0
-    right_index = len(array) - 1
+    low = 0
+    high = len(array) - 1
 
-    while left_index <= right_index:
-        middle_index = int((left_index + right_index) / 2)
+    while low <= high:
+        middle_index = int((low + high) / 2)
 
         if key_element == array[middle_index]:
             return middle_index, array[middle_index]
 
         elif key_element < array[middle_index]:
-            right_index = middle_index - 1
+            high = middle_index - 1
 
         else:
-            left_index = middle_index + 1
+            low = middle_index + 1
 
 
 ascending_order(arr)
