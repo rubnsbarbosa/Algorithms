@@ -15,7 +15,7 @@ def linear_search(list_elements, key_element):
             return i
 ```
 
-> Complexity of linear search is linear.  
+> Complexity of Linear Search is linear.  
 > Best case: **O(1)**  
 > Worst case: **O(n)**
 
@@ -59,7 +59,7 @@ def binary_search(array, low, high, key_element):
         return binary_search(array, low, middle_index - 1, key_element)
 ```
 
-> Complexity of binary search is log n.  
+> Complexity of Binary Search is log n.  
 > Best case: **O(1)**  
 > Worst case: **O(log n)**
 
@@ -70,8 +70,7 @@ def binary_search(array, low, high, key_element):
 ```python
 def bubble_sort(array):
     for i in range(len(array)):
-        a = i + 1
-        for j in range(a, len(array)):
+        for j in range(i+1, len(array)):
             if array[j] < array[i]:
                 aux = array[i]
                 array[i] = array[j]
@@ -80,3 +79,22 @@ def bubble_sort(array):
 ```
 
 > Complexity of Bubble Sort is **O(n²)**
+
+___
+
+* Selection Sort  
+
+```python
+def selection_sort(array):
+    for i in range(len(array)):
+        low = i
+        for j in range(i+1, len(array)):
+            if array[j] < array[low]:
+                low = j
+        aux = array[low]
+        array[low] = array[i]
+        array[i] = aux
+    return array
+```
+
+> Complexity of Selection Sort is **O(n²)**

@@ -3,14 +3,16 @@
 
 A = [2, 4, 1, 6, 5, 3]
 
-def bubble_sort(array):
+def selection_sort(array):
     for i in range(len(array)):
+        low = i
         for j in range(i+1, len(array)):
-            if array[j] < array[i]:
-                aux = array[i]
-                array[i] = array[j]
-                array[j] = aux
+            if array[j] < array[low]:
+                low = j
+        aux = array[low]
+        array[low] = array[i]
+        array[i] = aux
     return array
 
-response = bubble_sort(A)
+response = selection_sort(A)
 print(response)

@@ -11,3 +11,13 @@ More formally, the output must satisfy two conditions:
 
 The best case for bubble sort occurs when the list is already sorted. In this case, bubble sort makes one pass through the list, performing no swaps and N-1 comparisons.  
 The worst case for bubble sort occurs when the list is in reverse order. In this case, every item will have to be swapped with every other item on every pass through the algorithm. There will be **O(n²)** comparisons.
+
+### Selection sort
+
+The idea behind *selection sort* is that we put a list in order by placing each item in turn. In other words, we put the smallest item at the start of the list, then the next smallest item at the second position in the list, and so on until the list is in order.  
+
+The best case for selection sort occurs when the list is already sorted. In this case, the number of swaps is zero. We still have to compare each item in the list to each other item in the list on each pass through the algorithm. The first time through, we compare the first item in the list to all other items in the list, so the number of comparisons is (N-1). The second time through, we compare the second item in the list to the remaining items in the list, so the number of comparisons is (N-2). It turns out that the total number of comparisons for selection sort in the best case is (N − 1) + (N − 2) + ... + 2 + 1. This equation simplifies to N(N + 1)/2 − 1, which is approximately N2. Thus, even in the best case, selection sort requires **O(n²)** comparisons.  
+
+The worst case for selection sort occurs when the first item in the list is the largest, and the rest of the list is in order. In this case, we perform one swap on each pass through the algorithm, so the number of swaps is N. The number of comparisons is the same as in the best case, **O(n²)**.  
+
+The average case requires the same number of comparisons, **O(n²)**, and roughly N/2 swaps. Thus, the number of swaps in the average case is **O(n)**.  
