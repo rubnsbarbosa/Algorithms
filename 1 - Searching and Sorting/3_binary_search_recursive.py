@@ -1,7 +1,6 @@
 arr = [1, 2, 3, 4, 5, 6]
 
 def binary_search(array, low, high, key_element):
-    pass
     if low > high:
         return None
 
