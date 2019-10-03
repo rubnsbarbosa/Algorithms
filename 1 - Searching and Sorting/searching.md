@@ -1,4 +1,4 @@
-## Search algorithms  
+## Searching algorithms  
 
 There are two types of search algorithms: algorithms that don’t make any assumptions about the order of the list, and algorithms that assume the list is already in order.  
 We use the term search to indicate the item for which we are searching. We assume the list to search is an array of integers, although these algorithms will work just as well on any other primitive data type (doubles, characters, etc.). We refer to the array elements as items and the array as a list.  
