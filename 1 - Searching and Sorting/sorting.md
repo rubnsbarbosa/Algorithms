@@ -21,3 +21,11 @@ The best case for selection sort occurs when the list is already sorted. In this
 The worst case for selection sort occurs when the first item in the list is the largest, and the rest of the list is in order. In this case, we perform one swap on each pass through the algorithm, so the number of swaps is N. The number of comparisons is the same as in the best case, **O(n²)**.  
 
 The average case requires the same number of comparisons, **O(n²)**, and roughly N/2 swaps. Thus, the number of swaps in the average case is **O(n)**.  
+
+### Insertion sort  
+
+*Insertion sort* is a simple sorting algorithm that is relatively efficient for small lists and mostly sorted lists, and often is used as part of more sophisticated algorithms. It works by taking elements from the list one by one and inserting them in their correct position into a new sorted list. In arrays, the new list and the remaining elements can share the array's space, but insertion is expensive, requiring shifting all following elements over by one.  
+
+Best case: list is already sorted, number of comparisons is (n − 1) or **O(n)**.  
+
+Worst case: reversed list; each iteration shifts the element all the way down **O(n²)**.
