@@ -98,3 +98,21 @@ def selection_sort(array):
 ```
 
 > Complexity of Selection Sort is **O(n²)**
+
+___
+
+* Insertion Sort  
+
+```python
+def insertion_sort(array):
+    for i in range(0, len(array)):
+        aux = array[i]
+        j = i
+        while(j > 0 and array[j-1] > aux):
+            array[j] = array[j-1]
+            j = j - 1
+        array[j] = aux
+    return array
+```
+
+> Complexity of Insertion Sort is **O(n²)**
