@@ -28,4 +28,17 @@ The average case requires the same number of comparisons, **O(n²)**, and roughl
 
 Best case: list is already sorted, number of comparisons is (n − 1) or **O(n)**.  
 
-Worst case: reversed list; each iteration shifts the element all the way down **O(n²)**.
+Worst case: reversed list; each iteration shifts the element all the way down **O(n²)**.  
+
+
+### Quick sort  
+
+*Quicksort* is in fact a very fast sorting algorithm. The basic idea behind quicksort is this: Specify one element in the list as a “pivot” point. Then, go through all of the elements in the list, swapping items that are on the “wrong” side of the pivot. In other words, swap items that are smaller than the pivot but on the right side of the pivot with items that are larger than the pivot but on the left side of the pivot. Once you’ve done all possible swaps, move the pivot to wherever it belongs in the list. Now we can ignore the pivot, since it’s in position, and repeat the process for the two halves of the list (on each side of the pivot). We repeat this until all of the items in the list have been sorted.  
+
+Quicksort is an example of a divide and conquer algorithm. Quicksort sorts a list effectively by dividing the list into smaller and smaller lists, and sorting the smaller lists in turn.  
+
+The best case of quicksort occurs, obviously, when the list is already sorted. For this algorithm, the best case resembles the average case in terms of performance. The average case occurs when the pivot splits the list in half or nearly in half on each pass. Each pass through the algorithm requires N comparisons. But how many passes does quicksort take? Recall that every time we divide something in half repeatedly, as in binary search, the number of operations is approximately **log2 N**. So, the number of passes through the algorithm is approximately **log2N**, and thus the number of comparisons in the average and best cases is
+**O(n log n)**. The number of swaps differs in the best and average cases: for the best case, we have no swaps, but for the
+average case, by the same reasoning, we have **O(n log n)** swaps.  
+
+The worst case for quicksort occurs when the pivot is always the largest or smallest item on each pass through the list. In this instance, we do not split the list in half or nearly in half, so we do N comparisons over roughly N passes, which means that in the worst case quicksort is closer to **O(n²)** in performance. For the same reason, the number of swaps in the worst case can be as high as **O(n²)**.

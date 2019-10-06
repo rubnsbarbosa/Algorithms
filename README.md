@@ -116,3 +116,21 @@ def insertion_sort(array):
 ```
 
 > Complexity of Insertion Sort is **O(n²)**
+
+___
+
+* Quick Sort  
+
+```python
+def quick_sort(array, left, right):
+    index = partition(array, left, right)
+    if left < index - 1:
+        quick_sort(array, left, index - 1)
+    if index < right:
+        quick_sort(array, index, right)
+    return array
+```
+
+> Complexity of Quick Sort is n log n.  
+> Best case: **O(n log n)**  
+> Worst case: **O(n²)**
